@@ -133,7 +133,16 @@ The "Disconnect UNIX server" option allows the administrator to send a disconnec
 **Logout:**
 The "Logout" option allows the administrator to end the session and log out of the UNIX client. The UNIX client provides the administrator with a simple and efficient interface for managing images, logos, watermarks and communication with the UNIX server. Through the menu and available options, the administrator can perform system administration operations of adding the watermark in a convenient and efficient way.
 
-# 3. Image restoration
+# 3. Running program
+ 
+# server
+![](README/poza1.png)
+# INET client
+![](README/poza2.png)
+# UNIX client
+![](README/poza3.png)
+
+# 4. Image restoration
 **Logo resize:** The MagickScaleImage function is used to resize the logo image (logo_wand) to a desired size relative to the original image (image_wand). The logo size is adjusted using the width and height of the original image multiplied by a factor of 0.2. This resizes the logo to 20% of the original image size.
 
 **Transparency adjustment:** The MagickEvaluateImageChannel function is used to change the transparency (opacity) of the logo. The alpha channel of the logo image is evaluated using the AlphaChannel option and the MultiplyEvaluateOperator. This operation decreases the opacity of the logo by a factor of 0.5, effectively increasing its transparency.
@@ -146,7 +155,7 @@ The "Logout" option allows the administrator to end the session and log out of t
 
 **Success message display:** If the image is successfully saved and contains the watermark, a success message is displayed indicating the path to the watermarked image.
 
-# 4. Conclusion
+# 5. Conclusion
 The process of adding a watermark to an image is an important one in image processing. Using the MagickWand API, we have presented a sequence of steps to perform this operation.
 
 First, the logo is resized to match the dimensions of the underlying image. Next, the transparency of the logo is adjusted to achieve a desired opacity effect. The next step is to determine the position of the watermark on the image, taking into account available options such as the corners, centre and edges of the image. The logo is then composited over the image using the overlay operation. Finally, the resulting image containing the watermark is saved to a specified location.
